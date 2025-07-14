@@ -1,0 +1,61 @@
+[global]
+# Global configuration
+dataFrameSerialization = "legacy"
+
+[logger]
+# Logger configuration
+level = "error"
+messageFormat = "%(asctime)s %(message)s"
+
+[client]
+# Client configuration
+caching = true
+displayEnabled = true
+showErrorDetails = false
+toolbarMode = "minimal"
+
+[runner]
+# Runner configuration
+magicEnabled = true
+installTracer = false
+fixMatplotlib = true
+postScriptGC = true
+fastReruns = true
+enforceSerializableSessionState = false
+
+[server]
+# Server configuration
+runOnSave = false
+allowRunOnSave = false
+port = 8501
+enableCORS = false
+enableXsrfProtection = true
+maxUploadSize = 200
+maxMessageSize = 200
+enableWebsocketCompression = false
+enableStaticServing = true
+baseUrlPath = ""
+cookieSecret = "your-secret-key-here"
+headless = false
+fileWatcherType = "auto"
+address = "localhost"
+
+[browser]
+# Browser configuration
+serverAddress = "localhost"
+gatherUsageStats = false
+serverPort = 8501
+
+[theme]
+# Enhanced theme configuration
+base = "light"
+primaryColor = "#4A90E2"
+backgroundColor = "#F8FAFC"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1A202C"
+font = "sans serif"
+
+[ui]
+# UI configuration
+hideTopBar = false
+hideSidebarNav = false

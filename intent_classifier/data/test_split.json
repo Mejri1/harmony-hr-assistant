@@ -1,0 +1,1242 @@
+[
+  {
+    "text": "What's the company policy on non-compete agreements?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Feeling a bit overwhelmed but trying to stay hopeful.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the process for getting a promotion confirmed?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Thanks for the support during my difficult times.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling more positive about my career path",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I arrange a grievance meeting?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm having trouble staying positive lately",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Just wanted to share some good news, I closed that big deal!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Just wanted to share some positive feedback about my manager!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "The office is freezing today, can we adjust the thermostat?",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the procedure for requesting reasonable adjustments?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Good afternoon! How's everything going?",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "The new quiet room is great for focused work",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can I change my work hours temporarily?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the process for internal job transfers?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Just wanted to express my gratitude for the support.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I appreciate the constructive feedback I received",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Hi there! How's your day going?",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What are the rules for overtime pay?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can you share the policy on expense reimbursements?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What is the procedure for reporting workplace injuries?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "How do I enroll in the company’s retirement plan?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the maximum HSA contribution for this year?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Thanks for being such a supportive colleague.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can I get details on the health insurance benefits offered?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "How do I complete the new starter form?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Is there a process to request a salary advance?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "How do I apply for a promotion?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "You're such a lifesaver! Thank you!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the process for requesting sabbatical leave?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "How do I apply for a leave under FMLA?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Just wanted to say hello from my home office.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "This cold weather is really getting to me.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling a bit tired, but coffee is helping.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Is there a formal process to appeal my performance appraisal?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm feeling a bit fatigued, but I'll power through.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling creative and energized today",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can I get a copy of my employment contract?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What’s the procedure for filing a workplace grievance?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Feeling grateful for the flexible work arrangements.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm nervous about the upcoming changes at work",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy on pet bereavement leave?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Feeling grateful for the flexible work hours.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy on professional license reimbursement?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm feeling happy about reaching this milestone.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy on professional development funding?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What is the process for job promotions?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm grateful for the professional growth opportunities",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy on military leave?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the company's smoking policy?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "How do I file for FMLA leave?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What’s the policy on employee discounts?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Just wanted to say hi and see how you're doing",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How many days notice do I need to give for resignation?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the policy for taking personal calls during work hours?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can you explain the probation period evaluation process?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm feeling uncertain about my career path",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I feel so much better after talking things out.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I enroll in the employee wellness program?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "The new professional development budget is great",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I request a change in my job title?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Thanks for the mental health support, it really helps.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I check my remaining sick leave balance?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Are there any guidelines for professional development budgets?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What happens if I fail my probationary period?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can you explain the flexible spending account options?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the policy on paid time off for voting?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Good afternoon! How's your day shaping up?",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Are there any policies about using company vehicles?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm finding it hard to concentrate today.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy on sabbatical leave?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What is the process for reporting workplace safety hazards?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm really excited about learning new skills",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "It’s so nice to have a supportive team.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "You always know how to make me feel better",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Just wanted to say great job on that report!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "The new flexible scheduling has improved my life",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy on paid time off for volunteering?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the policy on personal photography and recording at work?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Thanks for being so understanding during my tough times.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the process for requesting a sabbatical?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the procedure for requesting a job share arrangement?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Are there any alcohol restrictions at work events?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Is there a formal process for requesting a transfer to a different department?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the process for transferring departments?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I’m feeling completely burnt out lately and need some advice.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I submit feedback on a training course?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Feeling stressed but thankful for the resources.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm struggling with imposter syndrome lately",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Thanks for being so patient with all my questions.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can you clarify the dress code policy?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "How do I check my vacation time accrual rate?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the company's policy on remote work equipment?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can I request additional information for a GDPR request?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Thank you for believing in me",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy on alumni networks and references?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Hey, I’m feeling a bit anxious but trying to manage.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "The new project management tool is really intuitive",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "You're such a positive role model",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Hello! Hope you're having a wonderful day",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Thanks for making the office such a fun place to work",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Are there any restrictions on taking leave during project deadlines?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the process for appealing a performance review?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm feeling proud of our team's accomplishments",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I access the employee portal?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can I get a copy of the employee handbook?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I’m so grateful for the team’s collaboration!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm really excited about the new project starting",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling really confident about my performance lately",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What’s the process for requesting a leave of absence?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Thanks for always having my back",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can I get reimbursed for home office setup?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can you explain the policy for submitting invention disclosures?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm grateful for the positive work environment",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Thanks for being so understanding during my tough times.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can I get a mentor outside of my department?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the process for requesting a salary review?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "You've helped me grow so much professionally",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What are the criteria for the annual performance appraisal?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What are the eligibility criteria for the employee referral bonus?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Hope everything is going smoothly for you.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the company's policy on background checks for new hires?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm a little annoyed with the constant interruptions.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the company policy on moonlighting?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can we plan a lunch together soon?",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Thanks for always being reliable",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the process for requesting a department transfer?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What’s the policy on employee travel expenses?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm feeling overwhelmed with everything going on",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can I get help with the equipment receipt form?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What’s the process for requesting a salary advance?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can I get a letter of concern explained?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Good morning! Hope everyone has a productive day ahead.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling more confident in my role now",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What is the company's policy on remote work equipment reimbursement?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm feeling really excited about my career prospects",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm excited about the new initiatives we're launching",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Thanks for the great onboarding experience!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can I get information on the employee recognition program?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm really enjoying the new collaboration tools",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Hey, just wanted to say thanks for the quick responses!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Is there a policy on working from home during the summer?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Feeling a bit overwhelmed but trying to stay hopeful.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Feeling a bit anxious about my performance review.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy on confidential company information?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "The new coffee machine is amazing, thank you!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the company's drug testing policy?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can you explain the company’s sick leave policy?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the process for acknowledging resignation?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Are there any guidelines for parental leave?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "The new quiet pods are great for focused work",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Thank you for being so patient with all my questions",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What benefits are included in the new health insurance plan?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "How do I access the company's org chart?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "It's great to see everyone back in the office!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling really connected to the company's mission",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can you clarify the policy on employee discounts?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I’m really struggling with motivation lately.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling a bit overwhelmed with all the new information.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling a bit lonely working from home",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I update my direct deposit banking details?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the policy on intellectual property rights?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm really excited about the upcoming team-building event!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling pretty excited about the new initiative.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's covered under our health insurance plan?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "How does the bonus structure work for sales staff?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "How do I submit a facilities maintenance request?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What are the details of the company's health insurance plans?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can I take unpaid time off for volunteer work?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Just wanted to share a positive thought for the day!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I appreciate how transparent leadership has been",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling really energized about my work today",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Feeling a bit isolated working remotely, any tips?",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling a bit down today.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Hey, just wanted to say I’m really enjoying the new wellness program.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Just wanted to share some positive feedback!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can you explain the process for internal job applications?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "The new quiet spaces have improved my focus",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "The new parental support group has been helpful",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can I get a copy of my last performance review?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm a little frustrated with the slow progress on this task.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy for requesting office supplies?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What are the company's rules on social media usage by employees?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What are the benefits of the new wellness program?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What is the timeline for new employee probation periods?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can I donate my vacation days to a colleague?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm feeling recharged after that vacation",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Hi there! How's everyone doing today?",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "This weather is just lovely today!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Thanks for always being there when I need help",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I’m so grateful for the team’s encouragement!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I update my emergency contact information?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the induction policy for new starters?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can I take a sabbatical after five years?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can I get time off for political activities?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm so grateful for my supportive teammates!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the drugs policy at our workplace?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can we have a fun team-building activity soon?",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I’ve been feeling a bit anxious about my workload.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm having a really tough time with my manager",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How does the annual salary review process work?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can I get information about the company’s retirement plan options?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can I get information about the company's volunteer time off policy?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm feeling pretty anxious about the presentation tomorrow",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What is the procedure for a leave of absence?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the policy on religious accommodations?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Can you share the details of the severance policy?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Hey, just wanted to check in and say hi!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the procedure for appealing a disciplinary decision?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "The new quiet hours policy has improved my focus",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I’m really enjoying the team dynamic!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I access the company’s training portal?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Good luck with your project!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I apply for the tuition reimbursement program?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "The stress from this project is affecting my sleep",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling really confident about my presentation tomorrow",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What’s the policy on employee relocation support?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the whistleblower protection policy?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the process for reporting harassment?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I'm feeling a bit lost about my career path",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Thanks for helping me settle into the new role!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy on fixed-term employment contracts?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "How often are performance reviews conducted?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Good evening! Hope you had a productive day",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Hey, loving the new office space! Looks great!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How do I report an incident at work?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "You make dealing with HR stuff so much easier",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Hey, just wanted to check in and say hi!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the process for reporting a conflict of interest?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "I’m so grateful for the team’s support!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the process for exit interviews?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the policy on personal relationships in the workplace?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Work has been really challenging but rewarding lately",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "How does the long-term disability insurance work?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What's the policy on personal use of company vehicles?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What is the procedure for reporting harassment?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Hope you have a restful evening!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Can you explain the reimbursement policy for travel expenses?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What is the policy on professional development and tuition reimbursement?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "What’s the process for requesting a transfer to another department?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Thanks for always being so approachable and kind.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "What's the policy on carrying over floating holidays?",
+    "label": "needs_rag",
+    "label_id": 0
+  },
+  {
+    "text": "Hey, just wanted to check in and say hi!",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Thanks for the feedback, I'll definitely take it into consideration.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling a bit under pressure with this tight deadline.",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "I'm feeling motivated to take on bigger challenges",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "This Monday blues is really hitting me hard",
+    "label": "no_rag",
+    "label_id": 1
+  },
+  {
+    "text": "Are there any policies on using personal devices for work?",
+    "label": "needs_rag",
+    "label_id": 0
+  }
+]

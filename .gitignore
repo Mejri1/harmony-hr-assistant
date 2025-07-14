@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+*.pyo
+*.pyd
+*.pkl
+*.db
+
+# Virtual environment
+venv/
+.env
+venv
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/config.toml
+
+# Firebase keys
+firebase_config.json
+firebase_credentials.json
+
+# HuggingFace / Transformers cache
+~/.cache/
+transformers_cache/
+datasets/
+
+# Model weights and checkpoints
+*.pt
+*.bin
+*.h5
+*.ckpt
+
+# VSCode
+.vscode/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environments
+.venv/
+venv/
+
+# Firebase Secrets
+firebase_config.json
+firebase_credentials.json
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# Datasets or indexes
+*.csv
+*.db
+*.npy
+*.npz
+*.jsonl
+
+# LangChain/FAISS
+vectorstore/
+# Ignore saved models
+intent_classifier/models/intent_classifier/final/*
