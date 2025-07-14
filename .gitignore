@@ -67,3 +67,5 @@ firebase_credentials.json
 vectorstore/
 # Ignore saved models
 intent_classifier/models/intent_classifier/final/*
+*.json
+!firebase_config.sample.json
