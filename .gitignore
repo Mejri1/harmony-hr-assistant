@@ -69,3 +69,10 @@ vectorstore/
 intent_classifier/models/intent_classifier/final/*
 *.json
 !firebase_config.sample.json
+hr-chatbot-e2074-firebase-adminsdk-fbsvc-483a3fba17.json
+# Ignore Firebase sensitive files
+firebase_config.json
+firebase_credentials.json
+
+# Ignore virtual environment
+venv/
