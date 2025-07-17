@@ -19,25 +19,35 @@ def summarize_conversation(prev_summary: str, new_messages: list, max_input_leng
     conversation_text = f"Existing summary: {prev_summary}\n\nNew exchange:\n"
     for msg in new_messages:
         sender = "You" if msg["sender"] == "user" else "Bot"
-        conversation_text += f"{sender}: {msg['text']}\n"
+        conversation_text += f"{sender}: {msg['content']}\n"
+
     conversation_text = conversation_text[-max_input_length:]
     summary = summarizer(conversation_text, max_length=150, min_length=30, do_sample=False)[0]['summary_text']
     return summary
 
 def get_incremental_summary(user_id: str, session_id: str, k: int = 10) -> str:
     """
-    Generate or update the summary for a session using BART.
-    Summarizes every k messages.
+    Generate an overall summary for a session using BART.
+    Summarizes ALL messages in the session, not just the last k.
+    The input to the model is structured as:
+    User: ...\nHarmony: ...\n for each message pair.
     """
-    prev_summary = load_session_summary(user_id, session_id) or ""
     messages_data = load_messages(user_id, session_id) or []
+    print(f"[DEBUG] Messages data: {messages_data}")
 
-    if len(messages_data) <= k:
-        new_messages = messages_data
-    else:
-        new_messages = messages_data[-k:]
+    # Build conversation string in the format: User: ... Harmony: ...
+    conversation_text = ""
+    for msg in messages_data:
+        if msg["sender"] == "user":
+            conversation_text += f"User: {msg['content']}\n"
+        elif msg["sender"] == "bot":
+            conversation_text += f"Harmony: {msg['content']}\n"
 
-    summary = summarize_conversation(prev_summary, new_messages)
+    # Truncate if too long for the model
+    max_input_length = 1024
+    conversation_text = conversation_text[-max_input_length:]
+
+    summary = summarizer(conversation_text, max_length=150, min_length=30, do_sample=False)[0]['summary_text']
     return summary
 
 # --- Guidance for Usage ---
@@ -52,9 +62,10 @@ Best practice for summarization with facebook/bart-large-cnn:
 # --- Get chat history for a session ---
 
 def get_memory_from_session(user_id: str, session_id: str):
+    print(f"[DEBUG] get memory from session {user_id} {session_id}")
     messages_data = load_messages(user_id, session_id) or []
     summary = load_session_summary(user_id, session_id) or ""
-
+    
     # Sort messages chronologically using timestamp
     messages_data.sort(key=itemgetter("timestamp"))
 
@@ -73,6 +84,7 @@ def get_memory_from_session(user_id: str, session_id: str):
     )
 
     # Hydrate memory from message pairs
+    print(f"[DEBUG] Hydrating memory from message pairs")
     for i in range(0, len(messages_data), 2):
         user_msg = messages_data[i]["content"] if messages_data[i]["sender"] == "user" else ""
         bot_msg = (

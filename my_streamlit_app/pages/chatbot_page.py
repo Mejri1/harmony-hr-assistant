@@ -2,8 +2,9 @@ import streamlit as st
 import sys
 import os
 import traceback
-import pdb
 from langchain.schema import AIMessage, HumanMessage
+from langdetect import detect
+from transformers import pipeline
 
 # Project root path
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -17,7 +18,6 @@ try:
 except Exception as e:
     print("🔥 Import failed in chatbot_page.py")
     traceback.print_exc()
-    pdb.set_trace()
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
@@ -36,9 +36,24 @@ def load_intent_model():
     except Exception as e:
         print("🔥 Failed to load intent model")
         traceback.print_exc()
-        pdb.set_trace()
 
 intent_model, intent_tokenizer = load_intent_model()
+
+# --- Translation pipelines ---
+@st.cache_resource
+def get_translation_pipelines():
+    fr_to_en = pipeline("translation", model="Helsinki-NLP/opus-mt-fr-en")
+    en_to_fr = pipeline("translation", model="Helsinki-NLP/opus-mt-en-fr")
+    return fr_to_en, en_to_fr
+
+fr_to_en, en_to_fr = get_translation_pipelines()
+
+def translate_text(text, source_lang, target_lang):
+    if source_lang == "fr" and target_lang == "en":
+        return fr_to_en(text, max_length=512)[0]['translation_text']
+    elif source_lang == "en" and target_lang == "fr":
+        return en_to_fr(text, max_length=512)[0]['translation_text']
+    return text
 
 label_id2name = {
     0: "needs_rag",
@@ -57,7 +72,6 @@ def classify_intent(text):
     except Exception as e:
         print("🔥 Error in classify_intent")
         traceback.print_exc()
-        pdb.set_trace()
 
 def unique_key_generator(prefix="key"):
     counter = 0
@@ -81,7 +95,6 @@ def load_chatbot_resources(user_id, session_id):
     except Exception as e:
         print("🔥 Error in load_chatbot_resources")
         traceback.print_exc()
-        pdb.set_trace()
 
 def chatbot_page(user_id, session_id):
     try:
@@ -92,7 +105,8 @@ def chatbot_page(user_id, session_id):
             "last_session_id": None,
             "messages_since_summary": 0,
             "user_input": "",
-            "messages": []
+            "messages": [],
+            "user_lang": "en"
         }.items():
             if key not in st.session_state:
                 st.session_state[key] = default
@@ -139,18 +153,36 @@ def chatbot_page(user_id, session_id):
         if st.button("Send") and user_input.strip():
             print("📝 User input:", user_input)
 
+            # Detect language
+            try:
+                detected_lang = detect(user_input)
+            except Exception:
+                detected_lang = "en"
+            print(f"🌐 Detected user language: {detected_lang}")
+
+            # Track language switch
+            if "user_lang" not in st.session_state or st.session_state["user_lang"] != detected_lang:
+                print(f"🔄 Language switched from {st.session_state.get('user_lang', 'unknown')} to {detected_lang}")
+                st.session_state["user_lang"] = detected_lang
+
+            # Translate to English if needed
+            user_input_en = user_input
+            if detected_lang == "fr":
+                user_input_en = translate_text(user_input, "fr", "en")
+                print(f"🔄 Translated user input to English: {user_input_en}")
+
             save_message(user_id, session_id, "user", user_input)
             st.session_state["displayed_messages"].append({"type": "human", "content": user_input})
             st.session_state["messages"].append(HumanMessage(content=user_input))
 
-            intent, confidence = classify_intent(user_input)
+            intent, confidence = classify_intent(user_input_en)
             st.markdown(f"🔎 *Detected intent:* **{intent}** (Confidence: {confidence:.2f})")
 
             retriever = vectordb.as_retriever(search_kwargs={"k": 3})
 
             if intent == "needs_rag":
                 print("📚 Running RAG retrieval...")
-                docs = retriever.get_relevant_documents(user_input)
+                docs = retriever.get_relevant_documents(user_input_en)
                 context = "\n\n".join([doc.page_content for doc in docs])
 
                 chain.prompt.template = f"""
@@ -186,21 +218,31 @@ Harmony's reply:
 """
 
             print("🧠 Invoking chain...")
-            response = chain.invoke({"input": user_input})
-            bot_reply = response if isinstance(response, str) else response.get("response", "[No response]")
-            print("🤖 Bot reply:", bot_reply)
+            response = chain.invoke({"input": user_input_en})
+            bot_reply_en = response if isinstance(response, str) else response.get("response", "[No response]")
+            print("🤖 Bot reply (EN):", bot_reply_en)
+
+            # Translate bot reply to French if needed
+            bot_reply = bot_reply_en
+            if st.session_state["user_lang"] == "fr":
+                bot_reply = translate_text(bot_reply_en, "en", "fr")
+                print("🔄 Translated bot reply to French:", bot_reply)
 
             save_message(user_id, session_id, "bot", bot_reply)
             st.session_state["displayed_messages"].append({"type": "ai", "content": bot_reply})
             st.session_state["messages"].append(AIMessage(content=bot_reply))
 
-            memory.save_context({"input": user_input}, {"output": bot_reply})
+            memory.save_context({"input": user_input_en}, {"output": bot_reply_en})
             st.session_state["messages_since_summary"] += 2
 
             if st.session_state["messages_since_summary"] >= SUMMARY_K:
+                print("🔄 Generating summary...")
                 summary = get_incremental_summary(user_id, session_id, k=SUMMARY_K)
+                print("🔄 Summary:", summary)
                 save_session_summary(user_id, session_id, summary)
+                print("🔄 Summary saved to Firestore")
                 st.session_state["messages_since_summary"] = 0
+                print("🔄 Messages since summary reset to 0")
 
             st.session_state["user_input"] = ""
             st.rerun()
@@ -208,4 +250,3 @@ Harmony's reply:
     except Exception as e:
         print("🔥 Exception in chatbot_page()")
         traceback.print_exc()
-        pdb.set_trace()
