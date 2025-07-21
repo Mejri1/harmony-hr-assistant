@@ -237,7 +237,7 @@ Harmony's reply:
 
             if st.session_state["messages_since_summary"] >= SUMMARY_K:
                 print("🔄 Generating summary...")
-                summary = get_incremental_summary(user_id, session_id, k=SUMMARY_K)
+                summary = get_incremental_summary(user_id, session_id)
                 print("🔄 Summary:", summary)
                 save_session_summary(user_id, session_id, summary)
                 print("🔄 Summary saved to Firestore")
