@@ -75,10 +75,14 @@ def load_session_history(user_id: str, session_id: str) -> list[dict]:
         })
     return history
 
-def save_session_summary(user_id: str, session_id: str, summary: str):
-    """Save the conversation summary to the session document."""
+def save_session_summary(user_id: str, session_id: str, summary: str, current_message_count: int):
+    """Save the conversation summary and message count to the session document."""
     session_ref = db.collection("users").document(user_id).collection("sessions").document(session_id)
-    session_ref.set({"summary": summary}, merge=True)
+    session_ref.set({
+        "summary": summary,
+        "summary_message_count": current_message_count
+    }, merge=True)
+
 
 def load_session_summary(user_id: str, session_id: str) -> str:
     """Load the conversation summary from the session document."""

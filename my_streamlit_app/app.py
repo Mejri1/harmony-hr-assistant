@@ -1,6 +1,16 @@
 import streamlit as st
 import time
 from datetime import datetime
+import sys
+import os
+import threading
+# Project root path
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if project_root not in sys.path:
+    sys.path.append(project_root)
+from chatbot.memory import get_incremental_summary
+from db.firebase import save_session_summary
+from firebase_admin import firestore
 
 st.set_page_config(
     page_title="Harmony HR Assistant", 
@@ -567,6 +577,37 @@ def show_loading_animation():
             progress_bar.progress(i + 1)
         progress_bar.empty()
 
+def summarize_and_save(uid, session_id):
+    try:
+        db = firestore.client()
+
+        session_ref = db.collection("users").document(uid).collection("sessions").document(session_id)
+        messages_ref = session_ref.collection("messages")
+        message_docs = messages_ref.stream()
+
+        messages = [doc.to_dict() for doc in message_docs]
+        current_message_count = len(messages)
+        print(f"[DEBUG] Current message count: {current_message_count}")
+
+        session_doc = session_ref.get()
+        if not session_doc.exists:
+            print("[ERROR] Session document not found.")
+            return
+
+        session_data = session_doc.to_dict()
+        saved_summary_count = session_data.get("summary_message_count", 0)
+        print(f"[DEBUG] Saved summary count: {saved_summary_count}")
+
+        if current_message_count > saved_summary_count:
+            summary = get_incremental_summary(uid, session_id)
+            save_session_summary(uid, session_id, summary, current_message_count)
+            print("[DEBUG] Session summary updated and saved.")
+        else:
+            print("[DEBUG] No new messages, skipping summarization.")
+    except Exception as e:
+        print(f"[ERROR] Failed to save summary in background: {e}")
+
+
 def welcome_page():
     add_custom_css()
     
@@ -680,6 +721,11 @@ def chatbot_page():
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
             if st.button("🏠 Back to Home", key="back_home", use_container_width=True):
+                # Summarize and save before going home
+                uid = st.session_state.get("uid")
+                session_id = st.session_state.get("current_session_id")
+                if uid and session_id:
+                    threading.Thread(target=summarize_and_save, args=(uid, session_id), daemon=True).start()
                 st.session_state["page"] = "welcome"
                 st.rerun()
         return
@@ -698,6 +744,11 @@ def chatbot_page():
     col1, col2, col3 = st.columns([2, 6, 2])
     with col1:
         if st.button("🏠 Home", key="back_to_welcome", use_container_width=True):
+            # Summarize and save before going home
+            uid = st.session_state.get("uid")
+            session_id = st.session_state.get("current_session_id")
+            if uid and session_id:
+                threading.Thread(target=summarize_and_save, args=(uid, session_id), daemon=True).start()
             st.session_state["page"] = "welcome"
             st.rerun()
     with col3:
@@ -719,18 +770,20 @@ def logout_user():
     """Handle user logout with smooth transition"""
     with st.spinner('👋 Signing you out...'):
         time.sleep(0.5)
-    
+    # Summarize and save before logout
+    uid = st.session_state.get("uid")
+    session_id = st.session_state.get("current_session_id")
+    if uid and session_id:
+        threading.Thread(target=summarize_and_save, args=(uid, session_id), daemon=True).start()
     for key in ["authenticated", "id_token", "uid", "email", "page", "current_session_id"]:
         if key in st.session_state:
             del st.session_state[key]
-    
     st.markdown("""
     <div class="success-message">
         <h3>✅ Successfully logged out</h3>
         <p>See you soon!</p>
     </div>
     """, unsafe_allow_html=True)
-    
     time.sleep(1)
     st.rerun()
 

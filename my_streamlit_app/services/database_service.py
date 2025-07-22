@@ -25,6 +25,7 @@ def create_new_session(uid):
         "sentiment_score": 0,
         "emotions": {},
         "summary": "",
+        "summary_message_count": 0,  # ✅ Track how many messages have been summarized
         "timestamp_created": SERVER_TIMESTAMP,
     })
     return session_id
